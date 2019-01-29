@@ -1,9 +1,6 @@
-const { events, Job } = require("brigadier")
+const { events, Job } = require("brigadier");
+const circle = require("./project1-module");
 
 events.on("exec", () => {
-  var sh = new Job("this-is-project1", "ubuntu:latest")
-
-
-  sh.tasks = ["echo project1"];
-  sh.run()
+  console.log("area of a circle with radius 3 " + circle.area(3));
 });
